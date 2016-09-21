@@ -2,6 +2,7 @@
 
 import string
 from math import ceil
+from datetime import datetime
 
 def readFileToArray( filename ):
     arr = [] # list of rankings
@@ -46,3 +47,10 @@ def mergeCount(a, b):
 
     return count, l
 
+
+if __name__ == '__main__':
+    a = readFileToArray( 'hw1test.txt')
+    print datetime.datetime.now()
+    inversion, sortedList = sortCount(a)
+    print
+    print datetime.datetime.now()
