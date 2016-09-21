@@ -9,16 +9,19 @@ with open('hw1test.txt') as file:
         tmp = line.strip(string.whitespace)
         a.append(int(tmp))
 
-n = len(a)
+n = 10
 inversion = 0 # of large inversions
 
 print datetime.datetime.now()
 # naive search
 for i in range(0, n,1):
-    for j in range(0,n,1):
-        if i < j & a[i]>2 * a[j]:
+    for j in range(i+1,n,1):
+        if a[i]>2 * a[j]:
                 inversion = inversion + 1
 
+
+
+print inversion
 print datetime.datetime.now()
 
 
