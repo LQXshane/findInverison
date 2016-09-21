@@ -15,8 +15,8 @@ def readFileToArray( filename ):
 
 def sortCount(List):
     if len(List) < 2: return List
-    m = len(List) / 2
-    return mergeCount(sortCount(List[:m]), sortCount(List[m:]))
+    s = int(ceil(len(List) / 2))
+    return mergeCount(sortCount(List[:s]), sortCount(List[s:]))
 
 def mergeCount(a, b):
     global count
